@@ -1,25 +1,15 @@
 <script>
 import { ref,onMounted } from 'vue';
 const oneValue = ref(null)
-onMounted(async()=>  {
-      try {
-        const response = await fetch('https://fakestoreapi.com/users/1');
-           const jsonData = await response.json();
-           oneValue.value = jsonData;
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    })
-    console.log(oneValue)
 </script>
 <template>
-<div class="mainContainer">
+<div class="main">
 <div class="userContainer">
-<p>UserName </p>
-<h1>Your Name</h1>
-<p>address</p>
-<p>Phone Number</p>
-<p>E mail</p>
+<p class="userName">hopkins</p>
+<h1> <span>Name</span> :william hopkins</h1>
+<p><span>address</span> : mesa, vally view ln</p>
+<p><span>Phone Number</span> :  1-478-001-0890</p>
+<p><span>E mail</span> :  william@gmail.com</p>
 </div>
 </div>
 </template>

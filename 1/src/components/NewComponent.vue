@@ -4,8 +4,15 @@ import { ref,onMounted } from 'vue';
 
 const data = ref(null)
 const oneUser = ref(false)
+const noofdata = ref("show only one user")
 function changeOneUser(){
     oneUser.value = !oneUser.value;
+    if(oneUser.value ===true){
+        noofdata.value = "Show All Data"
+    }
+    else{
+         noofdata.value = "Show Only One User"
+    }
 }
 
 
@@ -22,7 +29,7 @@ onMounted(async()=>  {
      
 </script>
 <template>
-<button @click="changeOneUser"> show only one user</button>
+<button @click="changeOneUser"> {{noofdata}}</button>
 <div v-if="oneUser"><UserComponent/></div>
 <div class="mainContainer2">
 
@@ -51,6 +58,7 @@ onMounted(async()=>  {
     height:200px;
     background-color:#EEF5FF;
     margin:20px;
+     box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
    
     }
     span{
