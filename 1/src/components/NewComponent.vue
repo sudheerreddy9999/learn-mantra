@@ -1,48 +1,23 @@
 <script setup lang="ts">
 import UserComponent from "./UserComponent.vue"
+import SecondComponet from "./SecondComponent.vue"
 import { ref,onMounted } from 'vue';
 
-const data = ref(null)
-const oneUser = ref(false)
-const noofdata = ref("show only one user")
-function changeOneUser(){
-    oneUser.value = !oneUser.value;
-    if(oneUser.value ===true){
-        noofdata.value = "Show All Data"
-    }
-    else{
-         noofdata.value = "Show Only One User"
-    }
-}
-
-
+const jdata = ref([])
+const newName = ref("sudheer");
 onMounted(async()=>  {
       try {
         const response = await fetch('https://fakestoreapi.com/users');
            const jsonData = await response.json();
-           data.value = jsonData;
+           jdata.value = jsonData;
+           console.log(jdata.value)
       } catch (error) {
         console.error('Error fetching data:', error);
       }
     })
-    console.log(data) 
-     
 </script>
 <template>
-<button @click="changeOneUser"> {{noofdata}}</button>
-<div v-if="oneUser"><UserComponent/></div>
-<div class="mainContainer2">
-
-<div class="mainContainer" v-for="data in data" v-if="!oneUser" >
-<div class="userContainer">
-<p class="userName">{{data.username}}</p>
-<h1> <span>Name</span> :{{data.name.firstname}} {{data.name.lastname}}</h1>
-<p><span>address</span> : {{data.address.city}}, {{data.address.street}}</p>
-<p><span>Phone Number</span> : {{data.phone}}</p>
-<p><span>E mail</span> : {{data.email}}</p>
-</div>
-</div>
-</div>
+<div><UserComponent :data="jdata.value"/></div>
 </template>
 
 <style>
