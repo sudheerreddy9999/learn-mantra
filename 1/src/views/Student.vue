@@ -26,6 +26,12 @@ const array = ref([
         name:"Enter Query",
         placeholder:"Enter Query"
     },
+    {
+        id:5,
+        type:"text",
+        name:"Enter Something",
+        placeholder:"Enter Something"
+    },
 ]
 );
 </script>

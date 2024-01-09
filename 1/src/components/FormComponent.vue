@@ -8,17 +8,12 @@ const inputValues = {};
 myData.forEach(input => {
     inputValues[input.name] = ref("");
 });
-
-console.log(inputValues)
-
-console.log(inputValues)
 const sendData= () => {
     const userData = {};
     myData.forEach(input => {
         userData[input.name] = inputValues[input.name].value;
     });
     const storedData = JSON.parse(localStorage.getItem("mydata")) || [];
-    console.log(storedData)
     storedData.push(userData);
     localStorage.setItem("mydata", JSON.stringify(storedData));
 };
@@ -45,8 +40,9 @@ const sendData= () => {
       <input type="radio" id="two" value="Female"  />
       <label for="two">Male</label >
       <input type="text" id="Email" name="Email" class="text" />
-      <button>Submit</button>
+      <button class="button">Submit</button>
     </form>
+    <div></div>
   </div>
 </template>
 
@@ -55,7 +51,8 @@ const sendData= () => {
   margin-top: 200px;
   margin-left: 0px;
   width: 400px;
-  height: 450px;    
+  height: 480px; 
+  margin-left: 35%; 
   align-items: center;
   justify-content: center;
   border-radius: 20px;      
@@ -77,14 +74,14 @@ h1{
 .forButton{
 display:block;
 }
-button{
+.button{
 display:block;
-margin-left: 35%;
 margin-top: 30px;
 width: 100px;
 height: 40px;
 border-radius: 20px;
 border: none;
 background-color: lightgreen;
+margin-left: 35%;
 }
 </style>

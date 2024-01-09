@@ -9,19 +9,19 @@ const router = createRouter({
       name: 'home',
       component: HomeView
     },
-    {
-      path: '/college',
-      name: 'college',
-      component: () => import('../views/College.vue')
-    },
-    {
-      path: '/student',
-      name: 'student',
-      component: () => import('../views/Student.vue')
-    },{
+   {
       path: '/newcomponent',
       name: 'newcomponent',
       component: () => import('../components/FirstComponent.vue')
+    }
+    ,{
+      path: '/day2',
+      name: 'day2',
+      component: () => import('../views/DayTwo.vue')
+    },  ,{
+      path: '/day3',
+      name: 'day3',
+      component: () => import('../views/DayThree.vue')
     }
   ]
 })
