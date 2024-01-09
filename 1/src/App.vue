@@ -1,17 +1,20 @@
-<script setup lang="ts">
-import { ref } from 'vue';
+<script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import HelloWorld from './components/HelloWorld.vue'
-import NewComponent from './components/NewComponent.vue'
 </script>
 
 <template>
-<header>
+  <header>
+
     <div class="wrapper">
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-        <RouterLink to="/Student">Student Signup</RouterLink>
+
+      <nav>
+        <RouterLink to="/college">College</RouterLink>
+        <RouterLink to="/student">Student</RouterLink>
+      </nav>
     </div>
   </header>
+
+  <RouterView />
 </template>
 
