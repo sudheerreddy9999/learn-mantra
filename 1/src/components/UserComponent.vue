@@ -28,6 +28,7 @@ console.log("Hi");
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
+  margin-left: 50px;
 }
 .mainContainer {
   margin: 10px;
@@ -36,8 +37,9 @@ console.log("Hi");
 
 span {
   font-weight: 500;
-  font-size: 17px;
+  font-size: 22px;
   margin-left: 10px;
+  padding-top: 10px;
 }
 
 .userName {

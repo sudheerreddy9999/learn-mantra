@@ -36,7 +36,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div>
+  <div class="day2MainContainer">
     <div class="buttons">
       <button @click="() => toggleState('coll')" class="day2">College</button>
       <button @click="() => toggleState('stud')" class="day2">Student</button>
@@ -77,6 +77,7 @@ onMounted(() => {
     justify-content: center;
     align-items: center;
     margin-top: 50px;
+    margin-left: 30%;
  }
  .day2{
      margin-left: 20px;
@@ -89,10 +90,14 @@ onMounted(() => {
      color: white;
      font-size: 18px;
  }
+ .day2MainContainer{
+  width:70%;
+ }
  .styled-table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 50px;
+    margin-left: 19%;
   }
   
   .styled-table th, .styled-table td {

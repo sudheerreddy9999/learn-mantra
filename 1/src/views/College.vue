@@ -1,5 +1,3 @@
-
-
 <script setup>
 import FormComponent from "../components/FormComponent.vue";
 import { ref } from 'vue';
@@ -9,7 +7,7 @@ const data = ref([
     {
         id:1,
         type:"text",
-        name:"reference Id",
+        name:"reference Id",    
         placeholder:"refernnce Id"
     },
     {
