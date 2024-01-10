@@ -1,8 +1,6 @@
 <script setup>
 import { ref, defineProps } from 'vue';
-const props=defineProps(['name']);
-console.log(props.name)
-console.log("hello")
+const props=defineProps(['name','formtype']);
 const myData = props.name;
 const inputValues = {};
 myData.forEach(input => {
@@ -17,15 +15,12 @@ const sendData= () => {
     storedData.push(userData);
     localStorage.setItem("mydata", JSON.stringify(storedData));
 };
-
-
 </script>
-
 <template>
-  <div class="form">
-    <h1>Student Details</h1>
+  <div class="form" :id="formtype">
+    <h1 class="formName">{{ formtype }}</h1>
     <form @submit.prevent="sendData">
-        <div v-for="name in name">
+        <div v-for="name in name" class="form-group">
             <label :for="name.name">{{name.name}}</label>
             <input
         :type="name.type"
@@ -34,12 +29,6 @@ const sendData= () => {
         class="text"
         />
         </div>
-        
-      <input type="radio" id="one" value="Male"  />
-      <label for="one">Female</label>
-      <input type="radio" id="two" value="Female"  />
-      <label for="two">Male</label >
-      <input type="text" id="Email" name="Email" class="text" />
       <button class="button">Submit</button>
     </form>
     <div></div>
@@ -48,40 +37,56 @@ const sendData= () => {
 
 <style>
 .form {
-  margin-top: 200px;
+  margin-top: 100px;
   margin-left: 0px;
-  width: 400px;
-  height: 480px; 
+  width: 500px;
+  height: 570px; 
   margin-left: 35%; 
   align-items: center;
   justify-content: center;
   border-radius: 20px;      
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
-input{
-    margin-left: 80px;
+label{
+  width: 100px;
+  margin-left: 50px;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 30px;
 }
-h1{
-    margin: 30px;
-    margin-left: 100px;
+input{
+  margin-left: 20px;
+  margin-bottom: 30px;
+}
+.formName{
+  margin: 30px;
+    margin-left: 160px;
+    padding-top: 30px;
+    font-size: 32px;
+    font-weight: 600;
+    color: lightgreen;
 }
 .text {
   display: block;
   width: 200px;
-  height: 30px;
+  height: 45px;
   border-radius: 10px;
-}
-.forButton{
-display:block;
 }
 .button{
 display:block;
-margin-top: 30px;
-width: 100px;
-height: 40px;
+width: 120px;
+height: 45px;
 border-radius: 20px;
 border: none;
+font-size: 18px;
 background-color: lightgreen;
-margin-left: 35%;
+margin-left: 38%;
+}
+.form-group{
+  display: flex;
+  align-items: center;
+}
+#College_Form{
+  height: 480px;
 }
 </style>

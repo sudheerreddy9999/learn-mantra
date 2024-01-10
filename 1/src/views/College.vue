@@ -4,7 +4,7 @@
 import FormComponent from "../components/FormComponent.vue";
 import { ref } from 'vue';
 
-const name = ref("sudheer reddy");
+const type = "College_Form"
 const data = ref([
     {
         id:1,
@@ -33,5 +33,5 @@ const data = ref([
   ])
 </script>
 <template>
-  <FormComponent :name="data" />
+  <FormComponent :name="data" :formtype="type" />
 </template>

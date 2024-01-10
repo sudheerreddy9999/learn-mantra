@@ -1,6 +1,7 @@
 <script setup>
 import FormComponent from "../components/FormComponent.vue";
 import { ref } from 'vue';
+const type = "Student Form"
 const array = ref([
     {
         id:1,
@@ -36,5 +37,5 @@ const array = ref([
 );
 </script>
 <template>
-  <FormComponent :name="array" />
+  <FormComponent :name="array" :formtype="type" />
 </template>

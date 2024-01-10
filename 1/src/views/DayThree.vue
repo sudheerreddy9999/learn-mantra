@@ -54,26 +54,52 @@ function callbackFunction() {
 </script>
 
 <template>
-    <div>
-        <button @click="()=>clickedImage(1)" class="firstButton"><img :src="img1"></button>
-        <button @click="()=>clickedImage(2)" class="myButton"><img :src="img2"></button>
-        <button @click="()=>clickedImage(3)" class="myButton"><img :src="img3"></button>
-    </div>
-    <div>
-        <button class="randomImage"><img :src="number"></button>
-    </div>
+  <div  :class="result?'mainRock':'orange'">
+    <h1 class="Title">Rock Paper Scissors</h1>
     <div v-if="result === null" class="result">
-        <h1>It's a Tie!</h1>
-    </div>
-    <div v-else-if="result" class="result">
-        <h1>Congratulations! You Win!</h1>
-    </div>
-    <div v-else class="danger">
-        <h1>Oops! Computer Wins!</h1>
-    </div>
+      <h1 style="color:orange; font-size: 38px;" >It's a Tie!</h1>
+  </div>
+  <div v-else-if="result" class="result">
+      <h1 class="day3h1">Congratulations! You Win!</h1>
+  </div>
+  <div v-else class="danger">
+      <h1 class="day3h" style="color: green; font-size: 38px;">Oops! Computer Wins!</h1>
+  </div>  
+    <div class="imageButtons">
+      <button @click="()=>clickedImage(1)" class="firstButton"><img :src="img1"></button>
+      <button @click="()=>clickedImage(2)" class="myButton"><img :src="img2"></button>
+      <button @click="()=>clickedImage(3)" class="myButton"><img :src="img3"></button>
+  </div>
+  <div>
+      <button class="randomImage"><img :src="number"></button>
+  </div>  
+  </div>
+    
 </template>
 
 <style>
+.mainRock{
+  background-color: rgb(81, 216, 126);
+  border-radius: 30px;
+}
+.orange{
+  background-color: rgb(242, 187, 166);
+  border-radius: 30px;
+}
+.imageButtons{
+  width: 90%;
+  height: 80%;
+  margin: 80px;
+  
+}
+.Title{
+  margin: 30px;
+  margin-left: 34%;
+  padding-top: 30px;
+  font-size: 42px;
+  font-weight: 600;
+  color: rgb(55, 52, 52); 
+}
 .myButton {
     margin: 40px;
     height: 250px;
@@ -86,25 +112,24 @@ function callbackFunction() {
 .firstButton{
   width: 200px;
 }
-.result {
-    width: 400px;
-    height: 100px;
-    background-color: green;
+.result {   
+  width: 500px;
+  color: rgb(242, 187, 166);
     margin-left: 30%;
     border-radius: 10px;
 }
 .danger {
-    width: 400px;
-    height: 100px;
-    background-color: red;
-    margin-left: 30%;
+  width: 500px;
+  color: rgb(128, 243, 183);
+    margin-left: 30%; 
     border-radius: 10px;
 }
-h1 {
+.day3h1 {
     margin: 10px;
     padding-top: 20px;
     padding-right: 20px;
-    color: rgb(245, 204, 204);
     font-size: 32px;
+    font-size: 38px;
+    font-weight: 600px;
 }
 </style>

@@ -9,34 +9,29 @@ console.log("Hi");
 <template>
   <div>
     <div class="main">
-      <div class="mainContainer" v-for="user in userData" :key="user.id">
+      <div class="mainContainer">
         <div class="userContainer">
-          <p class="userName">{{ user.username }}</p>
-          <h1><span>Name</span>:{{ user.name.firstname }} {{ user.name.lastname }}</h1>
-          <p><span>Address</span>: {{ user.address.city }}, {{ user.address.street }}</p>
-          <p><span>Phone Number</span>: {{ user.phone }}</p>
-          <p><span>Email</span>: {{ user.email }}</p>
+          <p class="userName">{{ userData.username }}</p>
+          <h1><span>Name</span>: {{ userData.name.firstname }} {{ userData.name.lastname }}</h1>
+          <p><span>Address</span>: {{ userData.address.city }}, {{ userData.address.street }}</p>
+          <p><span>Phone Number</span>: {{ userData.phone }}</p>
+          <p><span>Email</span>: {{ userData.email }}</p>
         </div>
       </div>
     </div>
   </div>
 </template>
 <style>
-.main{
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-}
-.mainContainer {
-  margin: 10px;
-  margin-top: 60px;
-}
-
 .userContainer {
   width: 350px;
   background-color: #eef5ff;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   padding: 20px;
+}
+.mainContainer {
+  margin: 10px;
+  margin-top: 60px;
 }
 
 span {
@@ -49,6 +44,7 @@ span {
   margin-left: 10px;  
   font-weight: 600;
   font-size: 16px;
+  color: black;
 }
 h1 {
   font-size: 18px;
@@ -62,4 +58,3 @@ button {
   width: 200px;
 }
 </style>
-
