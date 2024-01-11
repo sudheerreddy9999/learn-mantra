@@ -14,12 +14,12 @@ async function fetchData() {
     console.error('Error fetching data:', error);
   }
 }
-
+console.log(`hello Sudheer`)
 onMounted(fetchData);
 
 </script>
 
-<template>
+<template> 
   <div>
     <div v-if="jdata.length > 0" class="mainContainer2">
       <div v-for="data in jdata">
@@ -31,7 +31,7 @@ onMounted(fetchData);
 <style>
 .mainContainer2{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr ;
 }
 </style>
 

@@ -1,6 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
-
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
@@ -10,7 +9,7 @@ const router = createRouter({
       component: HomeView
     },
    {
-      path: '/newcomponent',
+      path: '/day1',
       name: 'newcomponent',
       component: () => import('../components/FirstComponent.vue')
     }
@@ -27,6 +26,11 @@ const router = createRouter({
       path: '/day4',
       name: 'day4',
       component: () => import('../views/DayFour.vue')
+    }
+    ,{
+      path: '/day1/:id',
+      name: 'day5',
+      component: () => import('../components/SingleUserComponent.vue')
     }
   ]
 })
