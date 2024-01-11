@@ -19,11 +19,11 @@ function onSubmit() {
                 <form @submit.prevent="onSubmit">
                         <div class="form-container">
                                 <div class="form-group">
-                                        <label for="name">Name:</label>
+                                        <label for="name" class="myLabel">Name:</label>
                                         <input type="text" id="name" v-model="name" class="emitInput" />
                                 </div>
                                 <div class="form-group">
-                                        <label for="age">Age:</label>
+                                        <label for="age" class="myLabel">Age:</label>
                                         <input type="text" id="age" v-model="age" class="emitInput" />
                                 </div>
                         </div>
@@ -70,7 +70,7 @@ h2 {
         align-items: center;
 }
 
-label {
+.myLabel {
         margin-right: 10px;
         width: 80px;
         margin-left: 30px;

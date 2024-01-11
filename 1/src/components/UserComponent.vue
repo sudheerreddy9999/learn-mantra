@@ -12,7 +12,11 @@ console.log("Hi");
   <div class="main">
     <div class="userContainer">
       <div class="userHeader">
-        <div> <img src="../assets/download.jpeg" class="userImg"></div>
+        <div>
+          
+        </div>
+        <div> <img src="../assets/download.jpeg" class="userImg">
+        </div>
         <div>
           <h1 class="userName"> {{ userData.name && userData.name.firstname }} {{ userData.name && userData.name.lastname
           }}</h1>

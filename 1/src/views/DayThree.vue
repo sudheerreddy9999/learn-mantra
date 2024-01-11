@@ -53,7 +53,7 @@ function callbackFunction() {
     <div  :class="answer?'initial':(result ? 'mainRock' : 'orange')">
     <h1 class="Title">Rock Paper Scissors</h1>
     <div v-if="result === null" class="result">
-      <h1 style="color:orange; font-size: 38px;" class="day3h">It's a Tie!</h1>
+      <h1 style="color:blue; font-size: 38px;  margin-left:300px;" class="day3h">It's a Tie!</h1>
   </div>
   <div v-else-if="result" class="result">
       <h1 class="day3h">Congratulations You Won </h1>
@@ -67,7 +67,7 @@ function callbackFunction() {
     </div>
   </div>  
     <div class="imageButtons">
-      <button @click="()=>clickedImage(1)" class="firstButton"><img :src="img1"></button>
+      <button @click="()=>clickedImage(1)" class="myButton  "><img :src="img1"></button>
       <button @click="()=>clickedImage(2)" class="myButton"><img :src="img2"></button>
       <button @click="()=>clickedImage(3)" class="myButton"><img :src="img3"></button>
       <div>
@@ -81,25 +81,22 @@ function callbackFunction() {
 
 <style>
 .initial{
-  border-radius: 30px;
   height: 100%;
   flex-grow: 1;
 }
 .mainRock{
   background-color: rgb(81, 216, 126);
-  border-radius: 30px;
   height: 100%;
   flex-grow: 1;
 }
 .orange{
   background-color: rgb(242, 187, 166);
-  border-radius: 30px;
   height: 100%;
   flex-grow: 1;
 }
 .imageButtons{
-  width: 90%;
-  height: 80%;
+  width: 70%;
+  height: 60%;
   margin: 80px;
   margin-left: 20%;
   
@@ -115,11 +112,13 @@ function callbackFunction() {
 .myButton {
     margin: 40px;
     height: 250px;
-    width: 300px;
+    width: 250px;
     border: none;
 }
 .randomImage {
-    margin-left: 23%;
+    margin-left: 26%;
+    width: 30%;
+  height: 300px;
 }
 .firstButton{
   width: 200px;
@@ -137,10 +136,8 @@ function callbackFunction() {
     border-radius: 10px;
 }
 .day3h {
-    margin: 10px;
-    padding-top: 20px;
     padding-right: 20px;
-    margin-left: 100px;
+    margin-left: 220px;
     font-size: 32px;
     width: 600px;
     font-size: 38px;

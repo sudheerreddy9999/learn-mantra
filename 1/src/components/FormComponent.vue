@@ -34,21 +34,20 @@ const sendData= () => {
     <div></div>
   </div>
 </template>
-
 <style>
 .form {
   margin-top: 100px;
   margin-left: 0px;
   width: 500px;
-  height: 570px; 
-  margin-left: 35%; 
+  height: 590px; 
+  margin-left: 50%; 
   align-items: center;
   justify-content: center;
   border-radius: 20px;      
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
 }
 label{
-  width: 100px;
+  width: 140px;
   margin-left: 50px;
   font-size: 18px;
   font-weight: 400;
@@ -87,6 +86,6 @@ margin-left: 38%;
   align-items: center;
 }
 #College_Form{
-  height: 480px;
+  height: 500px;
 }
 </style>

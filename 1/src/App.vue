@@ -9,7 +9,7 @@ import { RouterLink, RouterView } from 'vue-router'
       <div class="wrapper">
 
         <nav>
-          <RouterLink to="/day1" active-class="activeRoute" class="routerLink">Day 1</RouterLink>
+          <RouterLink to="/day1" active-class="activeRoute" class="routerLink">Day 1&5</RouterLink>
           <RouterLink to="/day2" active-class="activeRoute" class="routerLink">Day 2</RouterLink>
           <RouterLink to="/day3" active-class="activeRoute" class="routerLink">Day 3</RouterLink>
           <RouterLink to="/day4" active-class="activeRoute" class="routerLink">Day 4</RouterLink>
