@@ -1,37 +1,27 @@
 <script setup>
-import { ref } from 'vue';
-const name = ref("")
-const age = ref("")
-const emit = defineEmits(['userDataSubmitted'])
-function onSubmit() {
-        const userValue = {
-                name: name.value,
-                age: age.value
-        }
-        emit('userDataSubmitted', userValue)
-        name.value = ""
-        age.value = ""
-}
+import { useCounterStore } from '@/stores/counter';
+const submitUser = useCounterStore();
 </script>
-<template>
-        <div class="emitFormContainer">
-                <h2>Add User</h2>
-                <form @submit.prevent="onSubmit">
-                        <div class="form-container">
-                                <div class="form-group">
-                                        <label for="name" class="myLabel">Name:</label>
-                                        <input type="text" id="name" v-model="name" class="emitInput" />
-                                </div>
-                                <div class="form-group">
-                                        <label for="age" class="myLabel">Age:</label>
-                                        <input type="text" id="age" v-model="age" class="emitInput" />
-                                </div>
-                        </div>
-                        <button class="formButton">Submit</button>
-                </form>
 
+<template>
+  <div class="emitFormContainer">
+    <h2>Add User</h2>
+    <form @submit.prevent="submitUser.onFormUserSubmit">
+      <div class="form-container">
+        <div class="form-group">
+          <label for="name" class="myLabel">Name:</label>
+          <input type="text" id="name" v-model="submitUser.userName" class="emitInput" />
         </div>
+        <div class="form-group">
+          <label for="age" class="myLabel">Age:</label>
+          <input type="text" id="age" v-model="submitUser.userAge" class="emitInput" />
+        </div>
+      </div>
+      <button type="submit" class="formButton">Submit</button>
+    </form>
+  </div>
 </template>
+
 <style>
 .emitFormContainer {
         width: 400px;

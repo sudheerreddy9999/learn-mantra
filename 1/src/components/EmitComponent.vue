@@ -1,6 +1,9 @@
 <script setup>
 import { ref, defineProps } from 'vue'
+import { useCounterStore } from '@/stores/counter';
 const { user } = defineProps(['user'])
+const deleteUser = useCounterStore();
+console.log(user.value)
 const emit = defineEmits(['userDeleteValue'])
 function handeldeleteValue(userId) {
     console.log(userId);
@@ -13,7 +16,7 @@ function handeldeleteValue(userId) {
             <div class="users">
                 <p class="userInfo"><span class="formSpan">userName : </span>{{ user.name }}</p>
                 <p class="userInfo"> <span class="formSpan">age :</span> {{ user.age }}</p>
-                <button @click="() => handeldeleteValue(user.id)" class="deleteButton">delete</button>
+                <button @click="() =>deleteUser.deleteDay4User(user.id)" class="deleteButton">delete</button>
             </div>
         </div>
     </div>

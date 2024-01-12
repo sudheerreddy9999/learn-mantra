@@ -13,6 +13,7 @@ import { RouterLink, RouterView } from 'vue-router'
           <RouterLink to="/day2" active-class="activeRoute" class="routerLink">Day 2</RouterLink>
           <RouterLink to="/day3" active-class="activeRoute" class="routerLink">Day 3</RouterLink>
           <RouterLink to="/day4" active-class="activeRoute" class="routerLink">Day 4</RouterLink>
+          <RouterLink to="/day6" active-class="activeRoute" class="routerLink">Day 6</RouterLink>
         </nav>
       </div>
     </header>

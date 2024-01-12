@@ -1,37 +1,28 @@
 <script setup>
-import { ref, onMounted } from 'vue';
+import { onMounted } from 'vue';
+import { useCounterStore } from '@/stores/counter';
 import UserComponent from './UserComponent.vue';
 
-const jdata = ref([]);
+const $jdata1 = useCounterStore();
 
-async function fetchData() {
-  try {
-    const response = await fetch('https://fakestoreapi.com/users');
-    const jsonData = await response.json();
-    jdata.value = jsonData;
-    console.log(jdata.value);
-  } catch (error) {
-    console.error('Error fetching data:', error);
-  }
-}
-console.log(`hello Sudheer`)
-onMounted(fetchData);
-
+onMounted(async () => {
+  await $jdata1.allUsersData();
+});
 </script>
 
-<template> 
+<template>
   <div>
-    <div v-if="jdata.length > 0" class="mainContainer2">
-      <div v-for="data in jdata">
+    <div v-if="$jdata1.usersData" class="mainContainer2">
+      <div v-for="data in $jdata1.usersData" :key="data.id">
         <UserComponent :userData="data" />
       </div>
     </div>
   </div>
 </template>
+
 <style>
-.mainContainer2{
+.mainContainer2 {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr ;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 </style>
-
