@@ -5,16 +5,16 @@ const submitUser = useCounterStore();
 
 <template>  
   <div class="emitFormContainer">
-    <h2>Add User</h2>
+    <h2 class="text-center p-5 text-xl font-medium">Add User</h2>
     <form @submit.prevent="submitUser.onFormUserSubmit">
       <div class="form-container">
         <div class="form-group">
           <label for="name" class="myLabel">Name:</label>
-          <input type="text" id="name" v-model="submitUser.userName" class="emitInput" />
+          <input type="text" id="name" v-model="submitUser.userName"  class="mr-10 border h-10 border-gray-300 rounded-lg" />
         </div>
         <div class="form-group">
           <label for="age" class="myLabel">Age:</label>
-          <input type="text" id="age" v-model="submitUser.userAge" class="emitInput" />
+          <input type="text" id="age" v-model="submitUser.userAge"  class="mr-10 border h-10 border-gray-300 rounded-lg" />
         </div>
       </div>
       <button type="submit" class="formButton">Submit</button>
@@ -30,11 +30,6 @@ const submitUser = useCounterStore();
         margin: 30px;
         border-radius: 20px;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-}
-
-h2 {
-        padding: 20px;
-        margin-left: 120px;
 }
 
 .formButton {

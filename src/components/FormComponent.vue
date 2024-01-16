@@ -37,7 +37,7 @@ const sendData = () => {
                   <label for="first_name" class="block text-sm font-medium text-gray-700">{{ name.name }} </label>
                   <input :type="name.type" v-model="inputValues[name.name].value" :placeholder="name.placeholder"
                     name="first_name" id="first_name" autocomplete="given-name" bg-cyan-500
-                    class="mt-1  focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                    class="mt-1 h-10 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border border-gray-300 rounded-md">
                 </div>
               </div>
             </div>
@@ -76,6 +76,3 @@ const sendData = () => {
     </div>
   </div>
 </template>
-<style>input {
-  height: 40px;
-}</style>

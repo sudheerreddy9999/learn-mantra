@@ -52,7 +52,7 @@ function callbackFunction() {
 <template>
   <div class="m-0">
     <div>
-    <h1 class="Title">Rock Paper Scissors</h1>
+    <h1  class="text-2xl text-center font-bold xl:text-4xl">Rock Paper Scissors</h1>
   </div>  
     <div class="flex justify-evenly ">
       <button @click="()=>clickedImage(1)" class="w-5/12 " ><img :src="img1" class="w-5/12  m-auto"></button>
@@ -62,17 +62,17 @@ function callbackFunction() {
   <br>
   <div class="flex justify-center ml-16">
   <div v-if="result === null">
-    <p class="text-orange-400 text-5xl">It's a Tie!</p>
+    <p class="text-2xl text-center font-bold xl:text-4xl text-orange-400">It's a Tie!</p>
   </div>
   <div v-else-if="result" >
-      <h1 class="text-5xl">Congratulations You Won </h1>
+      <h1 class="text-2xl text-center font-bold xl:text-4xl text-green-900">Congratulations You Won </h1>
   </div>
   <div v-else >
     <div v-if="answer">
-      <h1 class="text-5xl">Start the Game</h1>
+      <h1 class="text-2xl text-center font-bold xl:text-4xl text-blue-400">Start the Game</h1>
     </div>
     <div v-else>
-      <h1 class="text-5xl" style="color: green; font-size: 38px;">Oops! Computer Wins!</h1>
+      <h1 class="text-2xl text-center font-bold xl:text-4xl text-red-400">Oops! Computer Wins!</h1>
     </div>
   </div>
 </div>
@@ -82,49 +82,3 @@ function callbackFunction() {
     </div>
 </div>
 </template>
-
-<style>
-.mainRock{
-  background-color: rgb(81, 216, 126);
-  height: 100%;
-  flex-grow: 1;
-}
-.orange{
-  background-color: rgb(242, 187, 166);
-  height: 100%;
-  flex-grow: 1;
-}
-.Title{
-  margin-left: 40%;
-  padding-top: 30px;
-  font-size: 42px;
-  font-weight: 600;
-  color: rgb(55, 52, 52); 
-}
-.myButton {
-    margin: 40px;
-    height: 250px;
-    width: 250px;
-    border: none;
-}
-.randomImage {
-    margin-left: 26%;
-    width: 30%;
-  height: 300px;
-}
-.firstButton{
-  width: 200px;
-}
-.result {   
-  width: 500px;
-  color: rgb(242, 187, 166);
-    margin-left: 30%;
-    border-radius: 10px;
-}
-.danger {
-  width: 500px;
-  color: rgb(128, 243, 183);
-    margin-left: 30%; 
-    border-radius: 10px;
-}
-</style>

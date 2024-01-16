@@ -79,11 +79,12 @@ background-image: url("https://www.transparenttextures.com/patterns/concrete-wal
 }
 
 #singleUserH1 {
-    margin-left: 52px;
+    margin-left: 100px;
+    font-size: larger;
+    font-weight: 600;
 }
 
-.nameCity {
-    margin: 30px;
+.nameCity { 
     margin-bottom: 10px;
 }
 
@@ -96,6 +97,7 @@ background-image: url("https://www.transparenttextures.com/patterns/concrete-wal
     font-weight: 300;
     font-size: 16px;
     width: 100px;
+    margin-top: 20px;
     display: inline-block;
     width: 100px;
 }
