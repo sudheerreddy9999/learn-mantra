@@ -15,12 +15,18 @@ async function fetchData() {
     }
 }
 onMounted(fetchData);
+function previous(){
+    window.history.back();
+
+}
 
 </script>
 
 <template>
+     
     <div class="singleUserComponent">
         <div class="singleUser1">
+            <img @click="previous"  class="flex-none w-10 h-10" src="../assets/back.png" alt="Day1">
             <img src="../assets/download.jpeg" class="userImg" id="SingleUserImg">
             <h1 class="userName" id="singleUserH1">{{ userData.username }}</h1>
         </div>
@@ -37,6 +43,7 @@ onMounted(fetchData);
                     userData.address && userData.address.street }}</p>
                 <p><span class="singleUserSpan">Phone :</span> {{ userData.address && userData.phone }} </p>
             </div>
+        
         </div>
 
     </div>

@@ -14,14 +14,15 @@ const sendData = () => {
   const storedData = JSON.parse(localStorage.getItem("mydata")) || [];
   storedData.push(userData);
   localStorage.setItem("mydata", JSON.stringify(storedData));
+  location.reload();
 };
 </script>
 <template>
   <div :id="formtype">
-    <div class=" flex items-center justify-center  px-4 sm:px-6 lg:px-8">
-      <div class="max-w-md w-full space-y-8">
+    <div class=" flex items-center justify-center  px-4 sm:px-6 lg:px-8 ">
+      <div class="max-w-md w-full space-y-8 shadow-lg shadow-cyan-500/50 rounded-lg mt-10">
         <div>
-          <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+          <h2 class="pt-5 pb-0 text-center text-3xl font-extrabold text-gray-900">
             {{ formtype }}
           </h2>
         </div>
@@ -29,7 +30,7 @@ const sendData = () => {
         <div class=" bg-white max-w-md rounded overflow-hidden shadow-xl p-5">
 
           <form class="space-y-4" action="#" @submit.prevent="sendData">
-            <input type="hidden" name="remember" value="True">
+            <input type="hidden" name="remember" value="True">  
             <div v-for="name in name" class="rounded-md shadow-sm -space-y-px">
               <div class="grid gap-6">
                 <div class="col-span-12">

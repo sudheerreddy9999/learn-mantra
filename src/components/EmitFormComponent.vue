@@ -3,7 +3,7 @@ import { useCounterStore } from '@/stores/counter';
 const submitUser = useCounterStore();
 </script>
 
-<template>
+<template>  
   <div class="emitFormContainer">
     <h2>Add User</h2>
     <form @submit.prevent="submitUser.onFormUserSubmit">

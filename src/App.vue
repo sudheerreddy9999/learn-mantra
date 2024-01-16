@@ -6,14 +6,14 @@ import { RouterLink, RouterView } from 'vue-router'
   <div>
     <div class="flex gradient-background bg-gradient-background bg-180% animate-gradient-animation fixed w-full">
       <img class=" flex-none w-18 h-18 mx-10"  src="./assets/learn.png"  alt="book"/>
-      <h1 class=" flex flex-auto w-64 justify-center items-center text-4xl text-white font-bold ">Mantra VueJs Learnings</h1>
+      <h1 class=" flex flex-auto w-64 justify-center items-center text-xl text-white font-bold xl:text-3xl">Mantra VueJs Learnings</h1>
       <img  class=" flex-none w-18 h-18 mx-10" width="68" height="48" src="./assets/Sudheer.png" alt="Sudheer"/>
     </div>
     <div class="flex max-h-screen">
     <div class="w-16 min-w-28">
       <header>
 
-        <div class=" fixed mt-16 h-screen w-28 gradient-background bg-gradient-background bg-180% animate-gradient-animation ">
+        <div class=" fixed mt-7 h-screen w-28 gradient-background bg-gradient-background bg-180% animate-gradient-animation ">
 
           <nav class="flex flex-col space-y-4 space-x-8">
            <br>

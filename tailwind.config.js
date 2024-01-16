@@ -19,7 +19,7 @@ export default {
         'xl': '1280px',
         // => @media (min-width: 1280px) { ... }
   
-        '2xl': '1536px',
+        '2xl': '2036px',
         // => @media (min-width: 1536px) { ... }
       },
       width:{
@@ -29,11 +29,16 @@ export default {
         18:'72px'
       },
       margin:{
-        7:'70px'
+        7:'72px'
       },
       colors:{
         'sea': '#092635',
-        'sidebar':'#1B4242'
+        'sidebar':'#1B4242',
+        'slate':"rgb(148 163 184)",
+        'boxSha':"rgba(0, 0, 0, 0.3)"
+      },
+      boxShadow: {
+        'sha': '5px 5px 10px rgba(0, 0, 0, 0.3)',
       },
       animation: {
         'gradient-animation': 'gradient-animation 18s ease infinite',
@@ -52,11 +57,12 @@ export default {
         },
       },
       backgroundImage: {
-        'gradient-background': 'linear-gradient(300deg, #00bfff, #ff4c68, #ef8172)',
+        'gradient-background': 'linear-gradient(300deg,  rgb(203 213 225) ,rgb(148 163 184), rgb(71 85 105))',
       },
       backgroundSize: {
         '180%': '180%',
       },
+      
     },
   },
   plugins: [],
