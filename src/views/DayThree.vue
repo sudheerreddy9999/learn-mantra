@@ -50,11 +50,11 @@ function callbackFunction() {
 </script>
 
 <template>
-  <div class="bg-purple-600 m-0">
+  <div class="m-0">
     <div>
     <h1 class="Title">Rock Paper Scissors</h1>
   </div>  
-    <div class="flex justify-evenly bg-slate-300">
+    <div class="flex justify-evenly ">
       <button @click="()=>clickedImage(1)" class="w-5/12 " ><img :src="img1" class="w-5/12  m-auto"></button>
       <button @click="()=>clickedImage(2)" class="w-5/12 " ><img :src="img2" class="w-5/12   m-auto"></button>
       <button @click="()=>clickedImage(3)" class="w-5/12" ><img :src="img3" class="w-5/12  m-auto"></button> 
@@ -62,23 +62,23 @@ function callbackFunction() {
   <br>
   <div class="flex justify-center ml-16">
   <div v-if="result === null">
-      <h1 style="color:blue; font-size: 38px;  margin-left:300px;" class="day3h">It's a Tie!</h1>
+    <p class="text-orange-400 text-5xl">It's a Tie!</p>
   </div>
   <div v-else-if="result" >
-      <h1 class="day3h">Congratulations You Won </h1>
+      <h1 class="text-5xl">Congratulations You Won </h1>
   </div>
   <div v-else >
     <div v-if="answer">
-      <h1 class="day3h">Start the Game</h1>
+      <h1 class="text-5xl">Start the Game</h1>
     </div>
     <div v-else>
-      <h1 class="day3h" style="color: green; font-size: 38px;">Oops! Computer Wins!</h1>
+      <h1 class="text-5xl" style="color: green; font-size: 38px;">Oops! Computer Wins!</h1>
     </div>
   </div>
 </div>
     <br>  
-  <div class="flex justify-center bg-pink-500">
-        <button class="w-5/12" v-if="!answer"><img :src="number" class="w-5/12 m-auto"></button>
+  <div class="flex justify-center">
+        <button class="w-5/12" ><img :src="number" class="w-5/12 m-auto"></button>
     </div>
 </div>
 </template>
@@ -93,13 +93,6 @@ function callbackFunction() {
   background-color: rgb(242, 187, 166);
   height: 100%;
   flex-grow: 1;
-}
-.imageButtons{
-  width: 70%;
-  height: 60%;
-  margin: 80px;
-  margin-left: 20%;
-  
 }
 .Title{
   margin-left: 40%;
@@ -133,13 +126,5 @@ function callbackFunction() {
   color: rgb(128, 243, 183);
     margin-left: 30%; 
     border-radius: 10px;
-}
-.day3h {
-    padding-right: 20px;
-    margin-left: 220px;
-    font-size: 32px;
-    width: 600px;
-    font-size: 38px;
-    font-weight: 600px;
 }
 </style>
